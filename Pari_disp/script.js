@@ -31,7 +31,7 @@ function controlloAnswer (parametroAnswer) {
         return true;
     }
     else {
-        alert("non hai inserito pari o dispari..")
+        alert("non hai inserito pari o dispari..");
         return false;
     }     
 }
@@ -45,8 +45,9 @@ alert("numero user: " + userNumber);
  * faccio funzione x num. random pc 
  * @returns {number}; tornerà un numero intero random da 1 a 5
  * */ 
+let random=0;
 function numeroPcRandom() {
-    let random = Math.floor( Math.random() * 5) + 1;
+    random = Math.floor( Math.random() * 5) + 1;
     return random;
 }  
 alert("numero pc: " + numeroPcRandom());
@@ -74,19 +75,20 @@ function controlloNumUtente (numero) {
  * @param {Number}; deve essere un numero
  * @returns {string}; tornerà una stringa "pari" o "dispari"*/  
 function pari_disp (num1, num2) {
+    
     let somma = num1 + num2;
-
-    if (somma % 2 == 0) {
-        return "pari"
+    
+    if (somma % 2 === 0) {
+        return "pari";
     } else {
-        return "dispari"
+        return "dispari";
     }
 
 }
-console.log(pari_disp(userNumber, numeroPcRandom()));
+console.log(pari_disp(userNumber, random));
 
 /* devo dichiarare il vincitore */
-if (pari_disp(userNumber, numeroPcRandom()) == answer) {
+if (pari_disp(userNumber, random) === answer) {
     alert("you win!");
 }
 else {
